@@ -1,6 +1,6 @@
 <?
 
-const DB_HEROKU = getenv('DATABASE_URL');
+const DB_HEROKU = constant($_ENV["DATABASE_URL"]);
 const DB_DSN="pgsql:host=ec2-54-247-94-127.eu-west-1.compute.amazonaws.com;dbname=de2mknpcc30d5o";
 const DB_USER="ywvxfwpsjqweip";
 const DB_PASS="9a187c0c365d8f260648f1592bebbf26ca5e153a309a2c849c3e68d18154ba74";
