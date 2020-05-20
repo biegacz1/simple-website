@@ -21,7 +21,7 @@ const OPTIONS = [
 
 function getConn() {
     try {
-        return new PDO( $PDO, DB_USER, DB_PASS, OPTIONS);
+        return new PDO( $PDO, null, null, OPTIONS);
     } catch (\PDOException $e) {
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
