@@ -19,6 +19,9 @@ if (strpos($route, '/index') !== false ) {
 } else if (strpos($route, '/update') !== false ) {
     $id = basename($route);
     update($id);
+} else {
+    header("Location: /index");
+    die();
 }
 
 
