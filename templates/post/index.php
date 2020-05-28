@@ -16,15 +16,15 @@
         <h1>Posty</h1>
         <div>
             <? foreach ($posts as $result) { ?>
-            <a class="list-group-item list-group-item-action" href="post/<? echo $result['id'] ?>">
-                <? echo $result['title'] ?>
+            <div class="list-group-item list-group-item-action" >
+                <a href="post/<? echo $result['id'] ?>"><? echo $result['title'] ?></a>
                 <a href="post/<? echo $result['id'] ?>/delete"
                    onclick="return confirm('Czy na pewno chcesz usunąć ten post?')"
                    class="close"
                    aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </a>
-            </a>
+            </div>
             <? } ?>
         </div>
     </div>
