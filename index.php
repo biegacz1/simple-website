@@ -19,6 +19,9 @@ if (strpos($route, '/index') !== false ) {
 } else if (strpos($route, '/update') !== false ) {
     $id = basename($route);
     update($id);
+} else if (strpos($route, '/delete') !== false ) {
+    $id = basename($route);
+    delete($id);
 } else {
     header("Location: /index");
     die();
@@ -99,5 +102,16 @@ function update($id)
     ]);
 
     header("location: /post/".$id);
+    exit();
+}
+
+function delete($id)
+{
+    $conn = getConn();
+    $stmt = $conn->prepare('DELETE FROM post WHERE id = :id');
+    $stmt->execute([ 'id' => $id ]
+    );
+
+    header("location: /index");
     exit();
 }
