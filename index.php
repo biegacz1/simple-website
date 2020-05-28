@@ -6,7 +6,7 @@ $route = $_SERVER['REQUEST_URI'];
 
 if (strpos($route, '/index') !== false ) {
     index();
-} else if (strpos($route, '/post') !== false ) {
+} else if (strpos($route, '/show') !== false ) {
     $id = basename($route);
     post($id);
 } else if (strpos($route, '/create') !== false ) {
