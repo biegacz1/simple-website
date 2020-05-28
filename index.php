@@ -107,10 +107,11 @@ function update($id)
 
 function deletePost($id)
 {
+    echo $id;
     $conn = getConn();
     $stmt = $conn->prepare('DELETE FROM post WHERE id = :id');
     $stmt->execute([ 'id' => $id ]);
 
-    header("location: /index");
+//    header("location: /index");
     exit();
 }
