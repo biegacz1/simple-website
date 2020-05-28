@@ -15,17 +15,15 @@
     <div class="mt-5 mb-2">
         <h1>Posty</h1>
         <div>
+            <? foreach ($posts as $result) { ?>
             <a class="list-group-item list-group-item-action" href="post/<? echo $result['id'] ?>">
+                <? echo $result['title'] ?>
                 <button type="button" class="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </a>
-        </div>
-        <ul>
-            <? foreach ($posts as $result) { ?>
-                <li><a href="post/<? echo $result['id'] ?>"><? echo $result['title'] ?></a></li>
             <? } ?>
-        </ul>
+        </div>
     </div>
 
     <div class="row">
