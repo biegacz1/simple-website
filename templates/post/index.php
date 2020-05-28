@@ -23,7 +23,7 @@
             <? foreach ($posts as $result) { ?>
                 <div class="list-group-item list-group-item-action">
                     <a href="show/<? echo $result['id'] ?>"><? echo $result['title'] ?></a>
-                    <a href="post/<? echo $result['id'] ?>/delete"
+                    <a href="/delete/<? echo $result['id'] ?>"
                        onclick="return confirm('Czy na pewno chcesz usunąć ten post?')"
                        class="close"
                        aria-label="Close">
